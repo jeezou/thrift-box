@@ -1,0 +1,25 @@
+version: "3"
+
+volumes:
+  node_modules:
+services:
+  nuxt:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:3000"
+      - "24678:24678"
+    volumes:
+      - .:/src
+      - node_modules:/src/node_modules
+    command: /bin/sh -c "npm run dev -- -o"
+    environment: 
+      MONGODB_URI: mongodb://mongo:27017/thrift-box-db
+  mongo:
+    ports:
+      - 27017:27017
+    image: mongo
+    restart: always
+    volumes:
+      - ./mongo-db/:/data/db

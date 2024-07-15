@@ -1,9 +1,10 @@
 # Setup
 > :warning: **The project was developed and run in WSL2**\
-> :warning: **Tested on WSL2 and Windows 11**
+> :warning: **Tested on WSL2 and Windows 11**\
+> :warning: **DOCKER REQUIRED**
 
 ### .env file example
->Don't forget to paste BSCSCAN_API_KEY
+>Don't forget to paste BSCSCAN_API_KEY and CREDENTIALS (App Auth)
 
 ```env
 WALLET_ADDRESS=0xdDa9365BbC83E17Cf99E530D2d6F1425C0Fd8137

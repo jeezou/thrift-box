@@ -1,75 +1,28 @@
-# Nuxt 3 Minimal Starter
+# Setup
+> :warning: **The project was developed and run in WSL2**\
+> :warning: **Tested on WSL2 and Windows 11**
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+### .env file example
+>Don't forget to paste BSCSCAN_API_KEY
 
-## Setup
+```env
+WALLET_ADDRESS=0xdDa9365BbC83E17Cf99E530D2d6F1425C0Fd8137
+BSC_USD_CONTRACT=0x55d398326f99059fF775485246999027B3197955
 
-Make sure to install the dependencies:
+BSCSCAN_API_KEY=<YOUR API KEY>
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+CREDENTIALS_LOGIN=<AUTH LOGIN>
+CREDENTIALS_PASSWORD=<AUTH PASSWORD>
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
+# Project Launch
+### These commands execute scripts located in the /bash directory
+> Build script deploys a docker container that contains two services (nuxt and mongo)\
+> Dev script starts the built container
 ```bash
-# npm
-npm run dev
+# Build project on first load
+bash bash/build
 
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+# Run without building
+bash bash/dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

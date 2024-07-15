@@ -1,4 +1,5 @@
 import { Schema, model } from 'mongoose';
+import { UserDocument } from '~/server/types/user';
 
 const UserSchema = new Schema({
   wallet: {
@@ -23,4 +24,4 @@ const UserSchema = new Schema({
   }
 })
 
-export const UserModel = model('User', UserSchema)
+export const UserModel = model<UserDocument>('User', UserSchema)
